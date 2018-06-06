@@ -1,0 +1,24 @@
+table{
+    border-style: solid;
+}
+
+DIV.tables {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    overflow: hidden; /* Fixing the problem in modern browsers */
+
+    display: inline-table;
+}
+
+DIV.tables TABLE.table1
+{
+    float: left;
+    margin: 10px;
+}
+
+DIV.tables TABLE.table2
+{
+    margin: 10px;
+}

@@ -1,0 +1,71 @@
+{block content}
+    <div class="tables">
+        <table class="table1">
+            <caption>Villages</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr n:foreach="$villages as $village" class="village">
+                <td>{$village->id}</td>
+                <td>{$village->name}</td>
+            </tr>
+        </table>
+
+        <table class="table1">
+            <caption>Users</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr n:foreach="$users as $act_user" class="user">
+                <td>{$act_user->id}</td>
+                <td>{$act_user->name}</td>
+            </tr>
+        </table>
+
+        <table class="table1">
+            <caption>Admin Users</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr n:foreach="$userAdmin as $admin" class="admin">
+                <td>{$admin->id}</td>
+                <td>{$admin->user_id}</td>
+            </tr>
+        </table>
+
+        <table class="table1">
+            <caption>Roles</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+            <tr n:foreach="$roles as $role" class="role">
+                <td>{$role->id}</td>
+                <td>{$role->name}</td>
+            </tr>
+        </table>
+
+        <table class="table2">
+            <caption>User_admin</caption>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Village</th>
+            </tr>
+            <tr n:foreach="$userAdminVillageRole as $tmp" class="userAdminVillageRole">
+                <td>{$tmp->id}</td>
+                <td>{$tmp->user_id}</td>
+                <td>{$tmp->role_id}</td>
+                <td>{$tmp->village_id}</td>
+                <td>{$tmp->valid}</td>
+            </tr>
+        </table>
+    </div>
+
+{control click}
+
+{/block}
